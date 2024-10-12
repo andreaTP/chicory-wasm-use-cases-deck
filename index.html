@@ -152,24 +152,108 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            # K8s integration patterns
+            # WASM Data transformations
 
-            <img src="imgs/extensions.png" style="float: left; width: 30%;margin-left: 20%;">
-
-            - [Camel](https://camel.apache.org/components/4.8.x/wasm-component.html)
-            - [Kroxy (community)](https://github.com/andreaTP/kroxylicious-wasm)
-            - [Kafka (Connect)](https://lburgazzoli.github.io/posts/2024-02-01_apache_kafka_connect_meets_wasm_part_1/)
-            - [Keycloak](https://github.com/pedroigor/keycloak-wasm-policy-provider)
-            - ...
+            <img src="imgs/red-panda-wasm-dataflow.png" style="width: 30%;">
 
             <br/>
 
-            > Inspired by: [Extism](https://extism.org/)
+            > Inspired by: [RedPanda](https://www.redpanda.com/blog/wasm-architecture)
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            breath
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # K8s integration patterns
+
+            how it started
+            <img src="imgs/k8s-sidecar.png" style="float: right; width: 30%; margin-right: 20%;">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # K8s integration patterns
+
+            how is going
+            <img src="imgs/k8s_today.png" style="float: right; width: 30%; margin-right: 20%;">
           </textarea>
         </section>
         <section data-markdown>
           <textarea data-template>
             <img src="imgs/enhanced_back_to_the_process.png" style="width: 40%">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # HTTP filters today
+            <img src="imgs/http-filters-k8s.png" style="width: 40%">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # HTTP filters tomorrow
+            <img src="imgs/http-filters-embedded.png" style="width: 30%; float: left; margin-left: 20%;">
+
+            - faster | *less network hops*
+            - self-contained | *less infra*
+            - simpler | *less cognitive overhead*
+
+            <br/>
+
+            > Inspired by: [quarkus-wasm-extension](https://github.com/evacchi/quarkus-wasm-extension)
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            <img src="imgs/opa-horizontal-color.png" style="width: 20%">
+
+            > OPA a unified toolset and framework for policy across the cloud native stack.
+
+            ```rego
+            default allow := false
+
+            allow if {
+              input.user == "alice"
+            }
+            ```
+
+            <p style="font-size: small;">Thanks Sanne</p>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Traditional
+            <img src="imgs/opa-service.svg" style="width: 40%">
+
+            > Credits: [official docs](https://www.openpolicyagent.org/docs/latest/)
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Wasm
+            <img src="imgs/opa-wasm.png" style="width: 30%">
+            
+            ```java
+            Opa.loadPolicy(new File("policy.wasm"));
+            policy.evaluate(input);
+            ```
+
+            > Experimental but complete: [repo](https://github.com/andreaTP/opa-chicory)
+            <img src="imgs/opa-chicory-tests.png" style="width: 20%;float: right; margin-right: 20%; margin-top: 1%">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            breath again
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            breath again
           </textarea>
         </section>
       </section>
