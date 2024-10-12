@@ -1,5 +1,3 @@
-# Devoxx BE 2024
+# Server Side Wasm & Chicory
 
-Tools in Action
-
-## Meet Chicory, exploit the power of WebAssembly on the server side!
+## The use-cases
